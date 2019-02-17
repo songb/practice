@@ -71,3 +71,13 @@ def quick_sort(arr, low, high):
 a=[45, 80, 30, 90, 40, 50, 70]
 quick_sort(a, 0, 6)
 print(a)
+
+
+def maxProfit(prices):
+    max_profit=0
+    for i in range(1, len(prices)):
+        p = prices[i]-prices[i-1]
+        if p>0:
+            max_profit=max_profit+p
+
+    return max_profit
